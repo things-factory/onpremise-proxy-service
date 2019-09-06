@@ -1,7 +1,7 @@
 var mdns = require('mdns')
 var browser
 var servers = {}
-process.on('bootstrap-module-middleware' as any, app => {
+process.on('bootstrap-module-middleware' as any, async app => {
   browser = mdns.createBrowser(mdns.tcp('tfserver'))
 
   browser.on('serviceUp', service => {
